@@ -13,7 +13,7 @@ read_and_calc_word_value () {
 		  char_isnotok=false
           echo "Έχουμε το γράμμα $char , θέση $i στο αλφάβητο, με αξία  ${letter_values[i]} " #for debugging purposes 
           wordvalue=$(( ${wordvalue} + ${letter_values[i]} ))
-          break   #no reason to check the remaining i's until 25 , go on with reading next char, break out of for loop , staying in while loop
+          break #no reason to check the remaining i's until 25, go on and read next char, break out of for loop, staying in while loop
         fi 
     done
     if [ char_isnotok ] && [ $i -eq 25 ] && [ "$char" != "Ω" ] && [ "$char" != "ω" ] && [ "$char" != "" ]  ; then #
